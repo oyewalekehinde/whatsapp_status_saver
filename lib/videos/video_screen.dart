@@ -16,7 +16,9 @@ class VideoScreen extends StatefulWidget {
   }
 }
 
-class VideoScreenState extends State<VideoScreen> {
+class VideoScreenState extends State<VideoScreen> with AutomaticKeepAliveClientMixin<VideoScreen> {
+  @override 
+  bool get wantKeepAlive => true;
   @override
   void initState() {
     super.initState();
@@ -24,6 +26,7 @@ class VideoScreenState extends State<VideoScreen> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     if (!Directory("${_videoDir.path}").existsSync()) {
       return Center(
         child: Text(

@@ -126,8 +126,8 @@ class _MyAppState extends State<MyApp> {
                             icon: Icon(Icons.settings_applications),
                             onPressed: () {
                               openAppSettings();
-                              Future.delayed(Duration(seconds: 3));
-                              SystemNavigator.pop();},
+                              Future.delayed(Duration(seconds: 3) , ()=> SystemNavigator.pop());
+                              },
                             label: Text(
                               'Settings',
                               style: TextStyle(fontSize: 20.0),
